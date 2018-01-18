@@ -9,7 +9,7 @@ python() {
         'dmoseley-wifi',               # Use wifi and install device firmware blobs
     }
 
-    for feature in d.getVar('DISTRO_FEATURES', True).split():
+    for feature in d.getVar('DISTRO_FEATURES').split():
         if feature.startswith("dmoseley-"):
             if feature not in dmoseley_local_features:
                 bb.fatal("%s from DISTRO_FEATURES is not a valid local feature."
