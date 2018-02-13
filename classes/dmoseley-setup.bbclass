@@ -69,7 +69,7 @@ IMAGE_FSTYPES_REMOVE_MENDER = " \
 "
 IMAGE_FSTYPES_APPEND_COMMUNITY = " \
     ext4 tar.xz \
-    ${@bb.utils.contains("MACHINE", "beaglebone", "jffs2.bmap", "", d)} \
+    ${@bb.utils.contains("MACHINE", "beaglebone-yocto", "jffs2.bmap", "", d)} \
     ${@bb.utils.contains("MACHINE", "colibri-imx7", "wic.bmap", "", d)} \
     ${@bb.utils.contains("MACHINE", "colibri-vf", "wic.bmap", "", d)} \
     ${@bb.utils.contains("SOC_FAMILY", "rpi", "rpi-sdimg.bmap", "", d)} \
